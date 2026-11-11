@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Interviews | Interview Manager</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+                <h2>Interview Manager</h2>
+            </div>
+
+            <nav class="sidebar-nav">
+
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="interviews.html" class="active">
+                    Interviews
+                </a>
+
+                <a href="interview.html">
+                    Add Interview
+                </a>
+
+                <a href="settings.html">
+                    Settings
+                </a>
+
+            </nav>
+
+            <a href="index.html" class="logout">
+                Logout
+            </a>
+
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <div class="content-header">
+
+                <div>
+                    <h1>Interviews</h1>
+
+                    <p>
+                        Manage and view all your interviews
+                    </p>
+                </div>
+
+                <a href="interview.html" class="add-btn">
+                    + Add Interview
+                </a>
+
+            </div>
+
+            <!-- Search and Filter -->
+            <section class="interview-section">
+
+                <div class="interview-toolbar">
+
+                    <input
+                        type="text"
+                        id="search-input"
+                        class="search-input"
+                        placeholder="Search interviews..."
+                    >
+
+                    <select id="status-filter" class="filter-select">
+
+                        <option value="all">
+                            All Status
+                        </option>
+
+                        <option value="scheduled">
+                            Scheduled
+                        </option>
+
+                        <option value="completed">
+                            Completed
+                        </option>
+
+                        <option value="cancelled">
+                            Cancelled
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <!-- Interview Table -->
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Candidate</th>
+
+                                <th>Company</th>
+
+                                <th>Position</th>
+
+                                <th>Date</th>
+
+                                <th>Time</th>
+
+                                <th>Status</th>
+
+                                <th>Action</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="interview-table-body">
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

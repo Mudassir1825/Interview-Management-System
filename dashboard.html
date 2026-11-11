@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Interview Management</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <h2>Interview Manager</h2>
+
+            <nav>
+                <a href="dashboard.html" class="active">Dashboard</a>
+                <a href="interviews.html">Interviews</a>
+                <a href="interview.html">Add Interview</a>
+                <a href="settings.html">Settings</a>
+            </nav>
+
+            <a href="index.html" class="logout">Logout</a>
+
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Header -->
+            <header class="header">
+
+                <div>
+                    <h1>Dashboard</h1>
+                    <p>Manage your interviews</p>
+                </div>
+
+                <a href="interview.html" class="add-btn">
+                    + Add Interview
+                </a>
+
+            </header>
+
+            <!-- Statistics -->
+            <section class="stats">
+
+                <div class="stat-card">
+                    <h3>Total Interviews</h3>
+                    <p id="total-interviews">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Scheduled</h3>
+                    <p id="scheduled-interviews">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Completed</h3>
+                    <p id="completed-interviews">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Cancelled</h3>
+                    <p id="cancelled-interviews">0</p>
+                </div>
+
+            </section>
+
+            <!-- Interview Section -->
+            <section class="interview-section">
+
+                <div class="section-header">
+
+                    <h2>Recent Interviews</h2>
+
+                    <input
+                        type="text"
+                        id="dashboard-search"
+                        placeholder="Search interviews..."
+                    >
+
+                </div>
+
+                <!-- Interview Table -->
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Candidate</th>
+                                <th>Company</th>
+                                <th>Position</th>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="dashboard-interview-body"></tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <!-- Sign In Required Popup -->
+    <div class="login-overlay">
+
+        <div class="login-popup">
+
+            <!-- Close Popup -->
+            <button
+                type="button"
+                class="close-popup"
+                aria-label="Close sign-in popup"
+            >
+                &times;
+            </button>
+
+            <div class="popup-icon">
+                🔒
+            </div>
+
+            <h2>Sign In Required</h2>
+
+            <p>
+                Please sign in to add and manage your interviews.
+            </p>
+
+            <!-- Popup Actions -->
+            <div class="popup-actions">
+
+                <a
+                    href="index.html"
+                    class="popup-signin"
+                >
+                    Sign In
+                </a>
+
+                <button
+                    type="button"
+                    class="popup-skip"
+                    id="popup-skip-for-now"
+                >
+                    Skip for now
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

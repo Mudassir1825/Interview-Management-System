@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Settings | Interview Manager</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- ========================================
+             SIDEBAR
+        ========================================= -->
+
+        <aside class="sidebar">
+
+            <h2>Interview Manager</h2>
+
+            <nav>
+
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="interviews.html">
+                    Interviews
+                </a>
+
+                <a href="interview.html">
+                    Add Interview
+                </a>
+
+                <a href="settings.html" class="active">
+                    Settings
+                </a>
+
+            </nav>
+
+            <a href="index.html" class="logout">
+                Logout
+            </a>
+
+        </aside>
+
+
+        <!-- ========================================
+             MAIN CONTENT
+        ========================================= -->
+
+        <main class="main-content">
+
+
+            <!-- ========================================
+                 HEADER
+            ========================================= -->
+
+            <header class="header">
+
+                <div>
+
+                    <h1>
+                        Settings
+                    </h1>
+
+                    <p>
+                        Manage your account and application preferences
+                    </p>
+
+                </div>
+
+            </header>
+
+
+            <!-- ========================================
+                 PROFILE SETTINGS
+            ========================================= -->
+
+            <section class="settings-section">
+
+                <h2>
+                    Profile Information
+                </h2>
+
+
+                <div class="settings-form">
+
+
+                    <!-- FULL NAME -->
+
+                    <div class="settings-group">
+
+                        <label for="settings-fullname">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="settings-fullname"
+                            placeholder="Enter your full name"
+                        >
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+
+                    <div class="settings-group">
+
+                        <label for="settings-email">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="settings-email"
+                            placeholder="Enter your email"
+                        >
+
+                    </div>
+
+
+                    <!-- PHONE -->
+
+                    <div class="settings-group">
+
+                        <label for="settings-phone">
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="settings-phone"
+                            placeholder="Enter your phone number"
+                            maxlength="10"
+                            inputmode="numeric"
+                        >
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ========================================
+                 NOTIFICATION SETTINGS
+            ========================================= -->
+
+            <section class="settings-section">
+
+                <h2>
+                    Notifications
+                </h2>
+
+
+                <!-- INTERVIEW REMINDERS -->
+
+                <label class="checkbox-option">
+
+                    <input
+                        type="checkbox"
+                        id="interview-reminders"
+                        checked
+                    >
+
+                    <span>
+                        Receive interview reminders
+                    </span>
+
+                </label>
+
+
+                <!-- APPLICATION UPDATES -->
+
+                <label class="checkbox-option">
+
+                    <input
+                        type="checkbox"
+                        id="application-updates"
+                        checked
+                    >
+
+                    <span>
+                        Receive application updates
+                    </span>
+
+                </label>
+
+            </section>
+
+
+            <!-- ========================================
+                 APPEARANCE
+            ========================================= -->
+
+            <section class="settings-section">
+
+                <h2>
+                    Appearance
+                </h2>
+
+
+                <div class="settings-group">
+
+                    <label for="theme">
+                        Theme
+                    </label>
+
+
+                    <select id="theme">
+
+                        <option value="light">
+                            Light
+                        </option>
+
+                        <option value="dark">
+                            Dark
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </section>
+
+
+            <!-- ========================================
+                 SECURITY
+            ========================================= -->
+
+            <section class="settings-section">
+
+                <h2>
+                    Security
+                </h2>
+
+
+                <button
+                    type="button"
+                    class="change-password-btn"
+                    id="change-password-btn"
+                >
+                    Change Password
+                </button>
+
+            </section>
+
+
+            <!-- ========================================
+                 SAVE SETTINGS
+            ========================================= -->
+
+            <div class="settings-actions">
+
+                <button
+                    type="button"
+                    class="save-settings-btn"
+                >
+                    Save Changes
+                </button>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- ========================================
+         JAVASCRIPT
+    ========================================= -->
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

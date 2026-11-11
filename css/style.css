@@ -1,0 +1,2448 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background: #f4f6f8;
+    color: #222;
+}
+
+
+/* =========================
+   SKIP BUTTON
+========================= */
+
+.top-skip {
+    position: fixed;
+    top: 20px;
+    right: 25px;
+
+    color: #2563eb;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    z-index: 1000;
+}
+
+.top-skip:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   AUTHENTICATION / LOGIN
+========================= */
+
+.auth-container {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #f4f6f8;
+
+    padding: 20px;
+}
+
+.auth-box {
+    width: 380px;
+
+    background: #ffffff;
+
+    padding: 30px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+}
+
+
+/* Authentication Header */
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.auth-header h1 {
+    font-size: 25px;
+    margin-bottom: 6px;
+}
+
+.app-icon {
+    width: 45px;
+    height: 45px;
+
+    margin: 0 auto 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #2563eb;
+    color: white;
+
+    border-radius: 8px;
+
+    font-size: 20px;
+}
+
+.auth-title {
+    text-align: center;
+
+    color: #666;
+
+    font-size: 14px;
+
+    margin-bottom: 25px;
+}
+
+
+/* Labels */
+
+.auth-box label {
+    display: block;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-bottom: 7px;
+}
+
+
+/* Input Fields */
+
+.auth-box input {
+    width: 100%;
+
+    padding: 11px;
+
+    margin-bottom: 18px;
+
+    border: 1px solid #aaa;
+
+    border-radius: 5px;
+
+    font-size: 14px;
+}
+
+.auth-box input:focus {
+    outline: none;
+
+    border-color: #2563eb;
+}
+
+
+/* =========================
+   PASSWORD ROW
+========================= */
+
+.password-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.password-row a {
+    font-size: 12px;
+
+    color: #2563eb;
+
+    text-decoration: none;
+}
+
+.password-row a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   PASSWORD VISIBILITY
+========================= */
+
+.password-input-box {
+    position: relative;
+
+    width: 100%;
+}
+
+
+/* Password Input */
+
+.password-input-box input {
+    width: 100%;
+
+    padding-right: 45px;
+}
+
+
+/* Password Input Box */
+
+.password-input-box {
+    position: relative;
+
+    width: 100%;
+}
+
+
+/* Eye Button */
+
+.password-toggle {
+    position: absolute;
+
+    right: 0;
+    top: 0;
+
+    width: 45px;
+    height: calc(100% - 18px);
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+
+    background: transparent;
+
+    padding: 0;
+
+    margin: 0;
+
+    color: #666;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    z-index: 10;
+
+    pointer-events: auto;
+}
+
+
+/* Eye Icon */
+
+.password-toggle i {
+    pointer-events: none;
+}
+
+
+/* Eye Hover */
+
+.password-toggle:hover {
+    color: #222;
+}
+
+
+/* Eye Focus */
+
+.password-toggle:focus {
+    outline: none;
+}
+
+/* =========================
+   PRIMARY BUTTON
+========================= */
+
+.primary-btn {
+    width: 100%;
+
+    padding: 11px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.primary-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* =========================
+   ACCOUNT TEXT
+========================= */
+
+.account-text {
+    text-align: center;
+
+    margin: 20px 0;
+
+    font-size: 13px;
+
+    color: #555;
+}
+
+.account-text a {
+    color: #2563eb;
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.account-text a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   DIVIDER
+========================= */
+
+.divider {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin: 20px 0;
+
+    color: #999;
+
+    font-size: 12px;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+
+    flex: 1;
+
+    height: 1px;
+
+    background: #ddd;
+}
+
+
+/* =========================
+   SOCIAL LOGIN
+========================= */
+
+.social-buttons {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+.social-btn {
+    position: relative;
+
+    width: 100%;
+
+    height: 42px;
+
+    padding: 10px 10px 10px 45px;
+
+    background: #fff;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.social-btn img {
+    position: absolute;
+
+    left: 15px;
+
+    width: 18px;
+
+    height: 18px;
+
+    object-fit: contain;
+}
+
+.social-btn span {
+    display: block;
+}
+
+.social-btn:hover {
+    background: #f7f7f7;
+}
+
+
+/* =========================
+   DASHBOARD PAGE LAYOUT
+========================= */
+
+.dashboard-container {
+    display: flex;
+
+    width: 100%;
+
+    min-height: 100vh;
+}
+
+
+/* =========================
+   DASHBOARD
+========================= */
+
+.dashboard {
+    display: flex;
+
+    min-height: 100vh;
+}
+
+
+/* Sidebar */
+
+.sidebar {
+    width: 240px;
+
+    background: #1e293b;
+
+    color: white;
+
+    padding: 25px 20px;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+.sidebar h2 {
+    font-size: 20px;
+
+    margin-bottom: 40px;
+}
+
+.sidebar nav {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.sidebar a {
+    text-decoration: none;
+
+    color: #cbd5e1;
+
+    padding: 12px 15px;
+
+    border-radius: 6px;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background: #2563eb;
+
+    color: white;
+}
+
+.logout {
+    margin-top: auto;
+}
+
+
+/* Main Content */
+
+.main-content {
+    flex: 1;
+
+    padding: 30px;
+}
+
+
+/* Header */
+
+.header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    margin-bottom: 5px;
+}
+
+.header p {
+    color: #777;
+}
+
+
+/* Add Interview Button */
+
+.add-btn {
+    display: inline-block;
+
+    text-decoration: none;
+
+    padding: 12px 20px;
+
+    background: #2563eb;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+}
+
+.add-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* =========================
+   STATISTICS
+========================= */
+
+.stats {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card h3 {
+    color: #64748b;
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
+}
+
+.stat-card p {
+    font-size: 28px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   INTERVIEW SECTION
+========================= */
+
+.interview-section {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.section-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    font-size: 20px;
+}
+
+.section-header input {
+    padding: 10px 15px;
+
+    width: 250px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 6px;
+}
+
+.section-header input:focus {
+    outline: none;
+
+    border-color: #2563eb;
+}
+
+
+/* =========================
+   TABLE
+========================= */
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 15px;
+
+    text-align: left;
+
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background: #f8fafc;
+
+    color: #475569;
+
+    font-size: 14px;
+}
+
+td {
+    font-size: 14px;
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.status {
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+.scheduled {
+    background: #dbeafe;
+
+    color: #1d4ed8;
+}
+
+.completed {
+    background: #dcfce7;
+
+    color: #15803d;
+}
+
+.cancelled {
+    background: #fee2e2;
+
+    color: #dc2626;
+}
+
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.edit-btn,
+.delete-btn {
+    padding: 6px 10px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-size: 12px;
+}
+
+.edit-btn {
+    background: #e0e7ff;
+
+    color: #3730a3;
+}
+
+.delete-btn {
+    background: #fee2e2;
+
+    color: #dc2626;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+    opacity: 0.8;
+}
+
+
+/* =========================
+   ADD / EDIT INTERVIEW FORM
+========================= */
+
+.form-container {
+    min-height: 100vh;
+
+    padding: 40px 20px;
+
+    background: #f4f6f8;
+}
+
+.form-box {
+    max-width: 800px;
+
+    margin: auto;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.form-box h1 {
+    margin-bottom: 8px;
+}
+
+.form-subtitle {
+    color: #777;
+
+    margin-bottom: 30px;
+}
+
+.form-box h2 {
+    font-size: 18px;
+
+    margin-top: 25px;
+
+    margin-bottom: 20px;
+
+    padding-bottom: 10px;
+
+    border-bottom: 1px solid #eee;
+}
+
+
+/* Form Groups */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+
+    border-color: #2563eb;
+}
+
+
+/* Two Column Form */
+
+.form-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+
+/* Form Buttons */
+
+.form-buttons {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+.cancel-btn,
+.save-btn {
+    padding: 12px 20px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+}
+
+.cancel-btn {
+    display: inline-block;
+
+    text-decoration: none;
+
+    border: none;
+
+    background: #e5e7eb;
+
+    color: #374151;
+}
+
+.save-btn {
+    border: none;
+
+    background: #2563eb;
+
+    color: white;
+}
+
+.cancel-btn:hover {
+    background: #d1d5db;
+}
+
+.save-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* =========================
+   SIGN IN REQUIRED POPUP
+========================= */
+
+.login-overlay {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(15, 23, 42, 0.55);
+
+    backdrop-filter: blur(8px);
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 2000;
+}
+
+.login-popup {
+    position: relative;
+
+    width: 380px;
+
+    max-width: 90%;
+
+    padding: 30px;
+
+    background: rgba(255, 255, 255, 0.85);
+
+    backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+
+    border-radius: 16px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+
+    text-align: center;
+}
+
+
+/* Close Button */
+
+.close-popup {
+    position: absolute;
+
+    top: 12px;
+
+    right: 15px;
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 25px;
+
+    color: #555;
+
+    cursor: pointer;
+}
+
+.close-popup:hover {
+    color: #111;
+}
+
+
+/* Popup Icon */
+
+.popup-icon {
+    width: 50px;
+
+    height: 50px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: rgba(37, 99, 235, 0.1);
+
+    border-radius: 50%;
+
+    font-size: 22px;
+}
+
+
+/* Popup Heading */
+
+.login-popup h2 {
+    margin-bottom: 8px;
+}
+
+.login-popup p {
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    margin-bottom: 22px;
+}
+
+
+/* Popup Social Buttons */
+
+.popup-social-buttons {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+.popup-social-btn {
+    position: relative;
+
+    width: 100%;
+
+    height: 42px;
+
+    padding: 10px 10px 10px 45px;
+
+    background: rgba(255, 255, 255, 0.8);
+
+    border: 1px solid #ddd;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.popup-social-btn img {
+    position: absolute;
+
+    left: 14px;
+
+    width: 18px;
+
+    height: 18px;
+
+    object-fit: contain;
+}
+
+.popup-social-btn:hover {
+    background: white;
+}
+
+
+/* Popup Bottom Actions */
+
+.popup-actions {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.popup-signin,
+.popup-cancel {
+    padding: 9px 18px;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+
+/* Popup Sign In */
+
+.popup-signin {
+    background: #2563eb;
+
+    color: white;
+
+    text-decoration: none;
+}
+
+.popup-signin:hover {
+    background: #1d4ed8;
+}
+
+
+/* Popup Cancel */
+
+.popup-cancel {
+    border: 1px solid #ccc;
+
+    background: white;
+
+    color: #444;
+}
+
+.popup-cancel:hover {
+    background: #f3f4f6;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 900px) {
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sidebar {
+        width: 200px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .top-skip {
+        top: 15px;
+
+        right: 15px;
+
+        font-size: 13px;
+    }
+
+    .auth-box {
+        width: 100%;
+
+        max-width: 380px;
+
+        padding: 25px 20px;
+    }
+
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .section-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .section-header input {
+        width: 100%;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .form-box {
+        padding: 25px 20px;
+    }
+
+    .login-popup {
+        width: 90%;
+
+        padding: 25px 20px;
+    }
+}
+
+
+/* =========================
+   INTERVIEWS PAGE HEADER
+========================= */
+
+.content-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+}
+
+.content-header h1 {
+    margin-bottom: 5px;
+}
+
+.content-header p {
+    color: #777;
+}
+
+.content-header .add-btn {
+    flex-shrink: 0;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   INTERVIEW TOOLBAR
+========================= */
+
+.interview-toolbar {
+    display: flex;
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+}
+
+.search-input,
+.filter-select {
+    height: 40px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 6px;
+
+    padding: 0 12px;
+
+    font-size: 13px;
+
+    background: #fff;
+}
+
+.search-input {
+    width: 280px;
+}
+
+.filter-select {
+    width: 150px;
+}
+
+.search-input:focus,
+.filter-select:focus {
+    outline: none;
+
+    border-color: #2563eb;
+}
+
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.action-btn {
+    padding: 6px 10px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    margin-right: 4px;
+}
+
+.edit-btn {
+    background: #e8f0fe;
+
+    color: #2563eb;
+}
+
+.delete-btn {
+    background: #fee2e2;
+
+    color: #dc2626;
+}
+
+.action-btn:hover {
+    opacity: 0.8;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    .dashboard-container .sidebar {
+        width: 100%;
+
+        min-width: 100%;
+
+        min-height: auto;
+    }
+
+    .dashboard-container .main-content {
+        width: 100%;
+
+        padding: 20px;
+    }
+
+    .content-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .interview-toolbar {
+        flex-direction: column;
+    }
+
+    .search-input,
+    .filter-select {
+        width: 100%;
+    }
+
+    .table-container {
+        overflow-x: auto;
+    }
+
+}
+
+
+/* =========================
+   SETTINGS PAGE
+========================= */
+
+.settings-section {
+    background: white;
+
+    padding: 25px;
+
+    margin-bottom: 20px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.settings-section h2 {
+    font-size: 18px;
+
+    margin-bottom: 20px;
+
+    color: #1e293b;
+}
+
+.settings-form {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.settings-group {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.settings-group label {
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
+}
+
+.settings-group input,
+.settings-group select {
+    padding: 11px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+}
+
+.settings-group input:focus,
+.settings-group select:focus {
+    outline: none;
+
+    border-color: #2563eb;
+}
+
+
+/* Checkbox */
+
+.checkbox-option {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 15px;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+.checkbox-option input {
+    width: 16px;
+
+    height: 16px;
+}
+
+
+/* Change Password */
+
+.change-password-btn {
+    padding: 10px 16px;
+
+    border: 1px solid #2563eb;
+
+    border-radius: 6px;
+
+    background: white;
+
+    color: #2563eb;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+.change-password-btn:hover {
+    background: #eff6ff;
+}
+
+
+/* Save Changes */
+
+.settings-actions {
+    display: flex;
+
+    justify-content: flex-end;
+
+    margin-bottom: 30px;
+}
+
+.save-settings-btn {
+    padding: 11px 20px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.save-settings-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* Settings Mobile */
+
+@media (max-width: 600px) {
+
+    .settings-form {
+        grid-template-columns: 1fr;
+    }
+
+    .settings-actions {
+        justify-content: stretch;
+    }
+
+    .save-settings-btn {
+        width: 100%;
+    }
+
+}
+
+
+/* ========================================
+   DARK THEME
+======================================== */
+
+body.dark-theme {
+    background-color: #121212;
+    color: #f5f5f5;
+}
+
+
+/* ========================================
+   MAIN DASHBOARD
+======================================== */
+
+body.dark-theme .dashboard {
+    background-color: #121212;
+}
+
+body.dark-theme .main-content {
+    background-color: #121212;
+    color: #f5f5f5;
+}
+
+
+/* ========================================
+   SIDEBAR
+======================================== */
+
+body.dark-theme .sidebar {
+    background-color: #1a1a1a;
+    color: #f5f5f5;
+    border-right: 1px solid #303030;
+}
+
+body.dark-theme .sidebar h2 {
+    color: #ffffff;
+}
+
+body.dark-theme .sidebar a {
+    color: #bdbdbd;
+}
+
+body.dark-theme .sidebar a:hover {
+    background-color: #2a2a2a;
+    color: #ffffff;
+}
+
+body.dark-theme .sidebar a.active {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+body.dark-theme .sidebar .logout {
+    color: #ff8a8a;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+body.dark-theme .header h1 {
+    color: #ffffff;
+}
+
+body.dark-theme .header p {
+    color: #aaaaaa;
+}
+
+
+/* ========================================
+   STAT CARDS
+======================================== */
+
+body.dark-theme .stat-card {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border: 1px solid #303030;
+}
+
+body.dark-theme .stat-card h3 {
+    color: #aaaaaa;
+}
+
+body.dark-theme .stat-card p {
+    color: #ffffff;
+}
+
+
+/* ========================================
+   SETTINGS / FORM SECTIONS
+======================================== */
+
+body.dark-theme .settings-section,
+body.dark-theme .form-box,
+body.dark-theme .form-container {
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+    border: 1px solid #303030;
+}
+
+body.dark-theme .settings-section h2,
+body.dark-theme .form-box h2 {
+    color: #ffffff;
+}
+
+
+/* ========================================
+   LABELS
+======================================== */
+
+body.dark-theme label {
+    color: #dddddd;
+}
+
+
+/* ========================================
+   INPUTS / SELECTS / TEXTAREA
+======================================== */
+
+body.dark-theme input,
+body.dark-theme select,
+body.dark-theme textarea {
+    background-color: #252525;
+    color: #ffffff;
+    border: 1px solid #444444;
+}
+
+body.dark-theme input:focus,
+body.dark-theme select:focus,
+body.dark-theme textarea:focus {
+    border-color: #777777;
+    outline: none;
+}
+
+body.dark-theme input::placeholder,
+body.dark-theme textarea::placeholder {
+    color: #888888;
+}
+
+
+/* ========================================
+   TABLE
+======================================== */
+
+body.dark-theme .table-container {
+    background-color: #1e1e1e;
+    border: 1px solid #303030;
+}
+
+body.dark-theme table {
+    color: #eeeeee;
+}
+
+body.dark-theme th {
+    background-color: #252525;
+    color: #ffffff;
+    border-bottom: 1px solid #444444;
+}
+
+body.dark-theme td {
+    color: #dddddd;
+    border-bottom: 1px solid #333333;
+}
+
+body.dark-theme tr:hover {
+    background-color: #242424;
+}
+
+
+/* ========================================
+   SEARCH
+======================================== */
+
+body.dark-theme .search-input {
+    background-color: #252525;
+    color: #ffffff;
+    border-color: #444444;
+}
+
+body.dark-theme .search-input::placeholder {
+    color: #888888;
+}
+
+body.dark-theme .filter-select {
+    background-color: #252525;
+    color: #ffffff;
+    border-color: #444444;
+}
+
+
+/* ========================================
+   BUTTONS
+======================================== */
+
+body.dark-theme button {
+    color: #ffffff;
+}
+
+body.dark-theme .edit-btn {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+body.dark-theme .edit-btn:hover {
+    background-color: #444444;
+}
+
+body.dark-theme .delete-btn {
+    background-color: #4a2525;
+    color: #ffb0b0;
+}
+
+body.dark-theme .delete-btn:hover {
+    background-color: #5a2d2d;
+}
+
+
+/* ========================================
+   ACTION BUTTON
+======================================== */
+
+body.dark-theme .action-btn {
+    color: #dddddd;
+}
+
+
+/* ========================================
+   CHECKBOX OPTIONS
+======================================== */
+
+body.dark-theme .checkbox-option {
+    color: #dddddd;
+}
+
+
+/* ========================================
+   PASSWORD BUTTON
+======================================== */
+
+body.dark-theme .password-toggle {
+    color: #aaaaaa;
+}
+
+body.dark-theme .password-toggle:hover {
+    color: #ffffff;
+}
+
+
+/* ========================================
+   LOGIN POPUP
+======================================== */
+
+body.dark-theme .login-popup {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border: 1px solid #3a3a3a;
+}
+
+body.dark-theme .login-popup h2,
+body.dark-theme .login-popup h3 {
+    color: #ffffff;
+}
+
+body.dark-theme .login-popup p {
+    color: #aaaaaa;
+}
+
+
+/* ========================================
+   GENERAL TEXT
+======================================== */
+
+body.dark-theme p {
+    color: #b5b5b5;
+}
+
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4 {
+    color: #ffffff;
+}
+
+
+/* ========================================
+   LINKS
+======================================== */
+
+body.dark-theme a {
+    color: #dddddd;
+}
+
+body.dark-theme a:hover {
+    color: #ffffff;
+}
+
+
+/* ========================================
+   DARK THEME - FINAL FIXES
+======================================== */
+
+
+/* ========================================
+   DASHBOARD / INTERVIEWS CONTAINERS
+======================================== */
+
+body.dark-theme .table-container {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border: 1px solid #333333;
+}
+
+body.dark-theme .interviews-container {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+
+/* ========================================
+   TABLE AREA
+======================================== */
+
+body.dark-theme .table-container table,
+body.dark-theme .interviews-container table {
+    background-color: #1e1e1e;
+}
+
+body.dark-theme .table-container th,
+body.dark-theme .interviews-container th {
+    background-color: #252525;
+    color: #ffffff;
+}
+
+body.dark-theme .table-container td,
+body.dark-theme .interviews-container td {
+    background-color: #1e1e1e;
+    color: #eeeeee;
+    border-bottom: 1px solid #333333;
+}
+
+
+/* ========================================
+   SEARCH AREA
+======================================== */
+
+body.dark-theme .search-container {
+    background-color: #1e1e1e;
+}
+
+body.dark-theme .search-input,
+body.dark-theme .filter-select {
+    background-color: #252525;
+    color: #ffffff;
+    border: 1px solid #444444;
+}
+
+
+/* ========================================
+   ADD / EDIT INTERVIEW FORM
+======================================== */
+
+body.dark-theme .form-box {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border: 1px solid #333333;
+}
+
+body.dark-theme .form-box input,
+body.dark-theme .form-box select,
+body.dark-theme .form-box textarea {
+    background-color: #252525;
+    color: #ffffff;
+    border: 1px solid #444444;
+}
+
+body.dark-theme .form-box label {
+    color: #dddddd;
+}
+
+
+/* ========================================
+   CANCEL BUTTON
+======================================== */
+
+body.dark-theme .cancel-btn {
+    background-color: #333333;
+    color: #dddddd;
+    border: 1px solid #444444;
+}
+
+body.dark-theme .cancel-btn:hover {
+    background-color: #444444;
+    color: #ffffff;
+}
+
+
+/* ========================================
+   SAVE / UPDATE BUTTON
+======================================== */
+
+body.dark-theme .save-btn {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+body.dark-theme .save-btn:hover {
+    background-color: #1d4ed8;
+}
+
+
+/* ========================================
+   AUTHENTICATION PAGE
+======================================== */
+
+body.dark-theme .auth-container {
+    background-color: #121212;
+}
+
+body.dark-theme .auth-box {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border: 1px solid #333333;
+}
+
+body.dark-theme .auth-box h1,
+body.dark-theme .auth-box h2 {
+    color: #ffffff;
+}
+
+body.dark-theme .auth-box p {
+    color: #aaaaaa;
+}
+
+body.dark-theme .auth-box label {
+    color: #dddddd;
+}
+
+body.dark-theme .auth-box input {
+    background-color: #252525;
+    color: #ffffff;
+    border: 1px solid #444444;
+}
+
+body.dark-theme .auth-box input::placeholder {
+    color: #888888;
+}
+
+
+/* ========================================
+   SOCIAL LOGIN BUTTONS
+======================================== */
+
+body.dark-theme .social-btn {
+    background-color: #252525;
+    color: #ffffff;
+    border: 1px solid #444444;
+}
+
+body.dark-theme .social-btn:hover {
+    background-color: #303030;
+}
+
+
+/* ========================================
+   OR DIVIDER
+======================================== */
+
+body.dark-theme .auth-box .or-divider {
+    color: #aaaaaa;
+}
+
+
+/* ========================================
+   LINKS
+======================================== */
+
+body.dark-theme .auth-box a {
+    color: #b8c7ff;
+}
+
+body.dark-theme .auth-box a:hover {
+    color: #ffffff;
+}
+
+
+/* ========================================
+   FORGOT PASSWORD
+======================================== */
+
+body.dark-theme .forgot-password {
+    color: #b8c7ff;
+}
+
+
+/* ========================================
+   POPUP OVERLAY
+======================================== */
+
+body.dark-theme .login-overlay {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+body.dark-theme .login-popup {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border: 1px solid #444444;
+}
+
+body.dark-theme .login-popup p {
+    color: #aaaaaa;
+}
+
+
+/* ========================================
+   SETTINGS
+======================================== */
+
+body.dark-theme .settings-section {
+    background-color: #1e1e1e;
+    border: 1px solid #333333;
+}
+
+body.dark-theme .settings-group input,
+body.dark-theme .settings-group select {
+    background-color: #252525;
+    color: #ffffff;
+    border-color: #444444;
+}
+
+
+/* ========================================
+   CHECKBOXES
+======================================== */
+
+body.dark-theme .checkbox-option {
+    color: #dddddd;
+}
+
+
+/* ========================================
+   GENERAL CARD TEXT
+======================================== */
+
+body.dark-theme .card,
+body.dark-theme .section {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+/* ========================================
+   DARK THEME - FINAL OVERRIDES
+======================================== */
+
+/* Page backgrounds */
+body.dark-theme,
+body.dark-theme .dashboard,
+body.dark-theme .dashboard-container,
+body.dark-theme .main-content,
+body.dark-theme .form-container,
+body.dark-theme .auth-container {
+    background-color: #121212 !important;
+    color: #f5f5f5 !important;
+}
+
+/* Sidebar */
+body.dark-theme .sidebar {
+    background-color: #1a1a1a !important;
+    color: #f5f5f5 !important;
+    border-right: 1px solid #303030 !important;
+}
+
+body.dark-theme .sidebar h2 {
+    color: #ffffff !important;
+}
+
+body.dark-theme .sidebar a {
+    color: #c7c7c7 !important;
+}
+
+body.dark-theme .sidebar a:hover,
+body.dark-theme .sidebar a.active {
+    background-color: #333333 !important;
+    color: #ffffff !important;
+}
+
+body.dark-theme .sidebar .logout,
+body.dark-theme .logout {
+    color: #ff8a8a !important;
+}
+
+/* Headers */
+body.dark-theme .header h1,
+body.dark-theme .content-header h1 {
+    color: #ffffff !important;
+}
+
+body.dark-theme .header p,
+body.dark-theme .content-header p {
+    color: #aaaaaa !important;
+}
+
+/* Main action button */
+body.dark-theme .add-btn {
+    background-color: #2563eb !important;
+    color: #ffffff !important;
+}
+
+body.dark-theme .add-btn:hover {
+    background-color: #1d4ed8 !important;
+}
+
+/* Statistic cards */
+body.dark-theme .stat-card {
+    background-color: #1e1e1e !important;
+    color: #ffffff !important;
+    border: 1px solid #303030 !important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25) !important;
+}
+
+body.dark-theme .stat-card h3 {
+    color: #aaaaaa !important;
+}
+
+body.dark-theme .stat-card p {
+    color: #ffffff !important;
+}
+
+/* Dashboard interview section */
+body.dark-theme .interview-section {
+    background-color: #1e1e1e !important;
+    color: #ffffff !important;
+    border: 1px solid #333333 !important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25) !important;
+}
+
+body.dark-theme .section-header h2 {
+    color: #ffffff !important;
+}
+
+body.dark-theme .section-header input {
+    background-color: #252525 !important;
+    color: #ffffff !important;
+    border-color: #444444 !important;
+}
+
+body.dark-theme .section-header input::placeholder {
+    color: #888888 !important;
+}
+
+/* Tables */
+body.dark-theme .table-container,
+body.dark-theme table {
+    background-color: #1e1e1e !important;
+    color: #eeeeee !important;
+}
+
+body.dark-theme .table-container {
+    border-color: #333333 !important;
+}
+
+body.dark-theme th {
+    background-color: #252525 !important;
+    color: #ffffff !important;
+    border-bottom-color: #444444 !important;
+}
+
+body.dark-theme td {
+    background-color: #1e1e1e !important;
+    color: #eeeeee !important;
+    border-bottom-color: #333333 !important;
+}
+
+body.dark-theme tbody tr:hover td {
+    background-color: #292929 !important;
+}
+
+/* Interviews toolbar */
+body.dark-theme .search-input,
+body.dark-theme .filter-select {
+    background-color: #252525 !important;
+    color: #ffffff !important;
+    border-color: #444444 !important;
+}
+
+body.dark-theme .search-input::placeholder {
+    color: #888888 !important;
+}
+
+/* Status badges */
+body.dark-theme .scheduled {
+    background-color: #dbeafe !important;
+    color: #1d4ed8 !important;
+}
+
+body.dark-theme .completed {
+    background-color: #dcfce7 !important;
+    color: #15803d !important;
+}
+
+body.dark-theme .cancelled {
+    background-color: #fee2e2 !important;
+    color: #dc2626 !important;
+}
+
+/* Edit / Delete / View buttons */
+body.dark-theme .edit-btn {
+    background-color: #333333 !important;
+    color: #ffffff !important;
+}
+
+body.dark-theme .edit-btn:hover {
+    background-color: #444444 !important;
+}
+
+body.dark-theme .delete-btn {
+    background-color: #4a2525 !important;
+    color: #ffb0b0 !important;
+}
+
+body.dark-theme .delete-btn:hover {
+    background-color: #5a2d2d !important;
+}
+
+body.dark-theme .action-btn {
+    color: #dddddd !important;
+}
+
+/* Add / Edit form */
+body.dark-theme .form-box {
+    background-color: #1e1e1e !important;
+    color: #ffffff !important;
+    border: 1px solid #333333 !important;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.dark-theme .form-box h1,
+body.dark-theme .form-box h2 {
+    color: #ffffff !important;
+}
+
+body.dark-theme .form-subtitle {
+    color: #aaaaaa !important;
+}
+
+body.dark-theme .form-box h2 {
+    border-bottom-color: #333333 !important;
+}
+
+body.dark-theme .form-group label {
+    color: #dddddd !important;
+}
+
+body.dark-theme .form-group input,
+body.dark-theme .form-group select,
+body.dark-theme .form-group textarea {
+    background-color: #252525 !important;
+    color: #ffffff !important;
+    border-color: #444444 !important;
+}
+
+body.dark-theme .form-group input::placeholder,
+body.dark-theme .form-group textarea::placeholder {
+    color: #888888 !important;
+}
+
+/* Form buttons */
+body.dark-theme .cancel-btn {
+    background-color: #333333 !important;
+    color: #dddddd !important;
+    border: 1px solid #555555 !important;
+}
+
+body.dark-theme .cancel-btn:hover {
+    background-color: #444444 !important;
+    color: #ffffff !important;
+}
+
+body.dark-theme .save-btn {
+    background-color: #2563eb !important;
+    color: #ffffff !important;
+}
+
+body.dark-theme .save-btn:hover {
+    background-color: #1d4ed8 !important;
+}
+
+/* Settings */
+body.dark-theme .settings-section {
+    background-color: #1e1e1e !important;
+    color: #ffffff !important;
+    border: 1px solid #333333 !important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25) !important;
+}
+
+body.dark-theme .settings-section h2 {
+    color: #ffffff !important;
+}
+
+body.dark-theme .settings-group label,
+body.dark-theme .checkbox-option {
+    color: #dddddd !important;
+}
+
+body.dark-theme .settings-group input,
+body.dark-theme .settings-group select {
+    background-color: #252525 !important;
+    color: #ffffff !important;
+    border-color: #444444 !important;
+}
+
+body.dark-theme .settings-group input::placeholder {
+    color: #888888 !important;
+}
+
+body.dark-theme .change-password-btn {
+    background-color: #333333 !important;
+    color: #ffffff !important;
+    border-color: #555555 !important;
+}
+
+body.dark-theme .change-password-btn:hover {
+    background-color: #444444 !important;
+}
+
+body.dark-theme .save-settings-btn {
+    background-color: #2563eb !important;
+    color: #ffffff !important;
+}
+
+body.dark-theme .save-settings-btn:hover {
+    background-color: #1d4ed8 !important;
+}
+
+/* Authentication */
+body.dark-theme .auth-box {
+    background-color: #1e1e1e !important;
+    color: #ffffff !important;
+    border-color: #333333 !important;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.dark-theme .auth-header h1,
+body.dark-theme .auth-box label {
+    color: #ffffff !important;
+}
+
+body.dark-theme .auth-title,
+body.dark-theme .account-text {
+    color: #aaaaaa !important;
+}
+
+body.dark-theme .auth-box input {
+    background-color: #252525 !important;
+    color: #ffffff !important;
+    border-color: #444444 !important;
+}
+
+body.dark-theme .auth-box input::placeholder {
+    color: #888888 !important;
+}
+
+body.dark-theme .password-toggle {
+    color: #aaaaaa !important;
+}
+
+body.dark-theme .password-toggle:hover {
+    color: #ffffff !important;
+}
+
+body.dark-theme .password-row a,
+body.dark-theme .account-text a {
+    color: #9db7ff !important;
+}
+
+/* Social login */
+body.dark-theme .social-btn {
+    background-color: #252525 !important;
+    color: #ffffff !important;
+    border-color: #444444 !important;
+}
+
+body.dark-theme .social-btn:hover {
+    background-color: #303030 !important;
+}
+
+/* Divider */
+body.dark-theme .divider {
+    color: #aaaaaa !important;
+}
+
+body.dark-theme .divider::before,
+body.dark-theme .divider::after {
+    background-color: #444444 !important;
+}
+
+/* Login popup */
+body.dark-theme .login-overlay {
+    background-color: rgba(0, 0, 0, 0.75) !important;
+}
+
+body.dark-theme .login-popup {
+    background: #1e1e1e !important;
+    color: #ffffff !important;
+    border-color: #444444 !important;
+}
+
+body.dark-theme .login-popup h2 {
+    color: #ffffff !important;
+}
+
+body.dark-theme .login-popup p {
+    color: #aaaaaa !important;
+}
+
+body.dark-theme .popup-social-btn {
+    background: #252525 !important;
+    color: #ffffff !important;
+    border-color: #444444 !important;
+}
+
+body.dark-theme .popup-social-btn:hover {
+    background: #303030 !important;
+}
+
+body.dark-theme .popup-cancel {
+    background: #333333 !important;
+    color: #dddddd !important;
+    border-color: #555555 !important;
+}
+
+body.dark-theme .popup-cancel:hover {
+    background: #444444 !important;
+}
+
+body.dark-theme .close-popup {
+    color: #aaaaaa !important;
+}
+
+body.dark-theme .close-popup:hover {
+    color: #ffffff !important;
+}
+
+/* General dark-mode text */
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4 {
+    color: #ffffff !important;
+}
+
+body.dark-theme p {
+    color: #b5b5b5 !important;
+}
+
+body.dark-theme a:hover {
+    color: #ffffff;
+}

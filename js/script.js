@@ -395,7 +395,7 @@ if (interviewForm) {
 
                     const response =
                         await fetch(
-                            `http://localhost:3000/api/interviews/${editInterviewId}`,
+                            `https://interview-management-system-o1yf.onrender.com/api/interviews/${editInterviewId}`,
                             {
                                 method: "PUT",
 
@@ -502,7 +502,7 @@ if (interviewForm) {
 
                 const response =
                     await fetch(
-                        "http://localhost:3000/api/interviews",
+                        "https://interview-management-system-o1yf.onrender.com/api/interviews",
                         {
                             method: "POST",
 
@@ -640,7 +640,7 @@ if (
     } else {
 
         fetch(
-            `http://localhost:3000/api/interviews/${loggedInUser.id}`
+            `https://interview-management-system-o1yf.onrender.com/api/interviews/${loggedInUser.id}`
         )
             .then(
                 function (response) {
@@ -1062,7 +1062,7 @@ function displayInterviews(
 
                         const response =
                             await fetch(
-                                `http://localhost:3000/api/interviews/${id}`,
+                                `https://interview-management-system-o1yf.onrender.com/api/interviews/${id}`,
                                 {
                                     method: "DELETE",
 
@@ -1229,7 +1229,7 @@ async function loadInterviews() {
 
         const response =
             await fetch(
-                `http://localhost:3000/api/interviews/${loggedInUser.id}`
+                `https://interview-management-system-o1yf.onrender.com/api/interviews/${loggedInUser.id}`
             );
 
 
@@ -1355,7 +1355,7 @@ function applyInterviewFilters() {
 
 
     fetch(
-        `http://localhost:3000/api/interviews/${loggedInUser.id}`
+        `https://interview-management-system-o1yf.onrender.com/api/interviews/${loggedInUser.id}`
     )
         .then(
             function (response) {
@@ -1714,7 +1714,7 @@ if (dashboardInterviewBody) {
 
             const response =
                 await fetch(
-                    `http://localhost:3000/api/interviews/${loggedInUser.id}`
+                    `https://interview-management-system-o1yf.onrender.com/api/interviews/${loggedInUser.id}`
                 );
 
 
@@ -1803,7 +1803,7 @@ if (dashboardInterviewBody) {
 
                     const response =
                         await fetch(
-                            `http://localhost:3000/api/interviews/${loggedInUser.id}`
+                            `https://interview-management-system-o1yf.onrender.com/api/interviews/${loggedInUser.id}`
                         );
 
 
@@ -2037,7 +2037,7 @@ if (signupForm && document.querySelector("#fullname")) {
         // Send Data to Backend
 
         try {
-            const response = await fetch("http://localhost:3000/api/signup", {
+            const response = await fetch("https://interview-management-system-o1yf.onrender.com/api/signup", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -2137,7 +2137,7 @@ if (
 
                 const response =
                     await fetch(
-                        "http://localhost:3000/api/login",
+                        "https://interview-management-system-o1yf.onrender.com/api/login",
                         {
                             method: "POST",
 
@@ -2641,7 +2641,7 @@ if (
     } else {
 
         fetch(
-            `http://localhost:3000/api/profile/${settingsUser.id}`
+            `https://interview-management-system-o1yf.onrender.com/api/profile/${settingsUser.id}`
         )
             .then(
                 function (response) {
@@ -2890,7 +2890,7 @@ if (saveSettingsButton) {
 
                 const response =
                     await fetch(
-                        `http://localhost:3000/api/profile/${loggedInUser.id}`,
+                        `https://interview-management-system-o1yf.onrender.com/api/profile/${loggedInUser.id}`,
                         {
                             method: "PUT",
 
@@ -3210,7 +3210,7 @@ if (changePasswordButton) {
 
                 const response =
                     await fetch(
-                        `http://localhost:3000/api/change-password/${loggedInUser.id}`,
+                        `https://interview-management-system-o1yf.onrender.com/api/change-password/${loggedInUser.id}`,
                         {
                             method: "PUT",
 
@@ -3465,7 +3465,7 @@ if (forgotPasswordForm) {
 
                 const response =
                     await fetch(
-                        "http://localhost:3000/api/forgot-password",
+                        "https://interview-management-system-o1yf.onrender.com/api/forgot-password",
                         {
                             method: "POST",
 
@@ -3634,7 +3634,7 @@ if (resetPasswordForm) {
 
                     const response =
                         await fetch(
-                            "http://localhost:3000/api/reset-password",
+                            "https://interview-management-system-o1yf.onrender.com/api/reset-password",
                             {
                                 method: "PUT",
 
